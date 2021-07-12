@@ -1,12 +1,11 @@
 import React from 'react'
 import "bulma/css/bulma.css"
 import "./Navbar.css"
+import CoolButton from "../button/CoolButton.js"
+
 
 class Navbar extends React.Component {
   render(){
-    let myClass = "button " + this.props.msgType
-    let myClassTwo = "button " + this.props.msgTypeTwo
-
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
@@ -30,12 +29,8 @@ class Navbar extends React.Component {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className={myClass}>
-                  <strong>LogIn</strong>
-                </a>
-                <a className={myClassTwo}>
-                  SignUp
-                </a>
+              <CoolButton title={"LogIn"} isDanger/>
+              <CoolButton title={"SignUp"}/>
               </div>
             </div>
           </div>

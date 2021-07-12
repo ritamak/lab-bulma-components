@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../navbar/Navbar.js'
-import FormFieldTwo from "../formfield/FormFieldTwo.js"
 import CoolButton from "../button/CoolButton.js"
 import "bulma/css/bulma.css"
 
@@ -8,9 +7,11 @@ import "bulma/css/bulma.css"
 const SignUp = () => {
     return (
       <div>
-        <Navbar msgType={"is-success"} msgTypeTwo={"is-danger"}/>
-        <FormFieldTwo/>
-        <CoolButton />
+        <Navbar/>
+        <FormField label={"Name"} placeholder={"eg: Rita Mak"}/>
+        <FormField label={"Email"} placeholder={"eg: test@gmail.com"}/>
+        <FormField label={"Password"} placeholder={"eg: 12345"}/>
+        <CoolButton title={"submit"}/>
       </div>
     );
   };

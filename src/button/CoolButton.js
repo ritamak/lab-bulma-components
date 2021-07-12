@@ -2,13 +2,13 @@ import React from 'react'
 import "bulma/css/bulma.css"
 import "./CoolButton.css"
 
-function CoolButton() {
-    return (
-        <div>
-        <button className="button is-rounded my-class is-danger is-small">Button 1</button>
-        <button className="button is-small is-success">Button 2</button>
-        </div>
-    )
+function CoolButton({isDanger, title}) {
+    if (isDanger) {
+        return <button className="button is-rounded my-class is-danger is-small">{title}</button>
+    } else {
+        return <button className="button is-small is-success">{title}</button>
+    }
 }
+
 
 export default CoolButton
